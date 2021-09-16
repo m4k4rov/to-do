@@ -1,42 +1,3 @@
-/*::-webkit-scrollbar-button {
-    background-image:url('');
-    background-repeat:no-repeat;
-    width:6px;
-    height:0px
-}
-
-::-webkit-scrollbar-track {
-    background-color:#32312e;
-    box-shadow:0px 0px 3px #000 inset;
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color:#ffcb17;
-    box-shadow:0px 1px 1px #fff inset;
-    background-image:url('https://yraaa.ru/_pu/24/59610063.png');
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-::-webkit-resizer{
-    background-image:url('');
-    background-repeat:no-repeat;
-    width:7px;
-    height:0px
-}
-
-::-webkit-scrollbar{
-    width: 11px;
-}
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
-}*/
-
-
 *
 {
     padding: 0;
@@ -64,7 +25,7 @@ body
 {
     width: 100%;
     height:200px;
-    background-image: url('../bg/bg.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -110,6 +71,44 @@ body
     overflow-y: auto;
     overflow-x: hidden;
 }
+/*.content::-webkit-scrollbar-button {
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:6px;
+    height:0px
+}
+
+.content::-webkit-scrollbar-track {
+    background-color:#4162f680;
+    box-shadow:0px 0px 3px #24378bb4 inset;
+}
+
+.content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color:#ffcb17;
+    box-shadow:0px 1px 1px #fff inset;
+    background-image:url('../img/scroll.png');
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.content::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:7px;
+    height:0px
+}
+
+.content::-webkit-scrollbar{
+    width: 5px;
+}
+
+.content {
+    scrollbar-width: thin;
+    scrollbar-color: #4162f680 orange;
+}
+*/
 .content::-webkit-scrollbar 
 { 
     display: none;
@@ -147,6 +146,8 @@ body
     top:10px;
     background-color: #FFF;
     max-width:285px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 .lineThrough
 {
@@ -175,13 +176,15 @@ body
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
-.add-to-do i{
+.add-to-do i
+{
     position: absolute;
-    font-size: 40px;
+    font-size: 35px;
     color: #4162f6;
 }
 
-.add-to-do input{
+.add-to-do input
+{
     position: absolute;
     left: 50px;
     height: 35px;
@@ -190,6 +193,12 @@ body
     border: none;
     font-size: 20px;
     padding-left:10px;
+    border-radius: 10px;
+}
+.add-to-do input:focus
+{
+    outline: 2px solid #4162f6;
+
 }
 .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #4162f6;
@@ -212,7 +221,8 @@ body
     font-size: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px) 
+{
     .container
     {
         width:90%;

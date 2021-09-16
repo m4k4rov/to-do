@@ -6,14 +6,17 @@ const clear = document.querySelector(".clear"),
       input = document.getElementById("input");
 
 //Константы для классов
+
 const CHECK = "fa-check-circle",
       UNCHECK = "fa-circle-thin",
       LINE_THROUGH = "lineThrough";
 
 //Переменные
+
 let LIST, id;
 
 //Получение данных из localstorage
+
 let data = localStorage.getItem("TODO");
 if (data) {
   LIST = JSON.parse(data);
@@ -25,6 +28,7 @@ if (data) {
 }
 
 //Функция для загрузки данных из localstorage
+
 function loadList(array) {
   array.forEach(item => {
     addToDo(item.name, item.id, item.done, item.trash);
@@ -32,12 +36,14 @@ function loadList(array) {
 }
 
 //Очистка localestorage
+
 clear.addEventListener("click",()=>{
   localStorage.clear();
   location.reload();
 })
 
 //Показываем дату
+
 const today = new Date();
 let options = {weekday: 'long', month: 'short', day: 'numeric'};
 dateElement.innerHTML = today.toLocaleDateString("ru-RU", options);
@@ -60,6 +66,7 @@ function addToDo(toDo, id, done, trash) {
 }
 
 //Добавляем элемент в лист
+
 document.addEventListener("keyup", function(event) {
   if(event.keyCode == 13) {
     const toDo = input.value;
@@ -81,6 +88,7 @@ document.addEventListener("keyup", function(event) {
 });
 
 //Действия с элементом
+
 function completeToDo(element) {
   element.classList.toggle(CHECK);
   element.classList.toggle(UNCHECK);
@@ -89,6 +97,7 @@ function completeToDo(element) {
 }
 
 //удаление элемента
+
 function removeToDo(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
   LIST[element.id].trash = true;
