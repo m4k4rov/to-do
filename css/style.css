@@ -145,7 +145,7 @@ body
     left:50px;
     top:10px;
     background-color: #FFF;
-    max-width:285px;
+    max-width:calc(100% - 90px);
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
