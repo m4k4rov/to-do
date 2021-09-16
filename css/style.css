@@ -146,6 +146,7 @@ body
     top:10px;
     background-color: #FFF;
     max-width:285px;
+    white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
